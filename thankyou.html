@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed - EyeCare Drops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --color-navy: #1E3A5F;
+      --color-navy-dark: #12253D;
+      --color-gold: #FFC107;
+      --color-gold-dark: #D48800;
+      --color-bg: #F4F6F8;
+      --color-card-bg: #FFFFFF;
+      --color-green: #22C55E;
+      --color-green-light: #E8F5E9;
+      --color-text-dark: #1A202C;
+      --color-text-muted: rgba(30, 58, 95, 0.78);
+      --font-body: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text-dark);
+      line-height: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 1.25rem 0.85rem 2.5rem;
+    }
+
+    .thankyou-wrapper {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .thankyou-card {
+      background: var(--color-card-bg);
+      border: 2px solid rgba(30, 58, 95, 0.12);
+      border-radius: 28px;
+      padding: 2rem 1.4rem 1.8rem;
+      box-shadow: 0 16px 36px rgba(30, 58, 95, 0.08);
+      position: relative;
+    }
+
+    .thankyou-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-navy);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 700;
+      transition: color 0.2s ease, transform 0.2s ease;
+      margin-bottom: 1.2rem;
+    }
+
+    .thankyou-back:hover {
+      color: var(--color-gold-dark);
+      transform: translateX(-3px);
+    }
+
+    .thankyou-content {
+      text-align: center;
+    }
+
+    /* Green / Brand Success Check Circle */
+    .thankyou-check {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 1.1rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #EBF5FF;
+      border: 3px solid var(--color-navy);
+      color: var(--color-navy);
+      box-shadow: 0 8px 20px rgba(30, 58, 95, 0.15);
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
+
+    .thankyou-check i {
+      font-size: 34px;
+      color: var(--color-green);
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .thankyou-content h1 {
+      color: var(--color-navy);
+      font-size: clamp(1.8rem, 6.5vw, 2.3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .thankyou-content h2 {
+      color: #1A202C;
+      font-size: clamp(1.15rem, 4.2vw, 1.35rem);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.6rem;
+    }
+
+    .thankyou-content > p {
+      color: var(--color-text-muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Product & Delivery Flow Row */
+    .thankyou-product-row {
+      display: grid;
+      grid-template-columns: 1fr 50px 1fr;
+      align-items: center;
+      gap: 12px;
+      margin: 1.6rem 0 1.2rem;
+      background: #F8FAFC;
+      border: 1.5px solid rgba(30, 58, 95, 0.1);
+      border-radius: 20px;
+      padding: 1.2rem 0.8rem;
+    }
+
+    .thankyou-product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .thankyou-product-img-wrap {
+      width: 100px;
+      height: 100px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid rgba(30, 58, 95, 0.12);
+      background: #FFFFFF;
+      display: grid;
+      place-items: center;
+    }
+
+    .thankyou-product img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thankyou-arrow {
+      color: var(--color-navy);
+      font-size: 26px;
+      display: grid;
+      place-items: center;
+    }
+
+    .thankyou-delivery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .thankyou-delivery-icon-wrap {
+      width: 100px;
+      height: 100px;
+      border-radius: 16px;
+      border: 2.5px solid var(--color-navy);
+      background: #FFFFFF;
+      display: grid;
+      place-items: center;
+      color: var(--color-navy);
+      font-size: 38px;
+      box-shadow: 0 4px 12px rgba(30, 58, 95, 0.08);
+    }
+
+    .thankyou-product strong,
+    .thankyou-delivery strong {
+      margin-top: 8px;
+      color: var(--color-navy);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    /* Status Bar */
+    .thankyou-status {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 1.2rem 0 1.5rem;
+      padding: 0.9rem 0.8rem;
+      background: var(--color-navy);
+      border-radius: 16px;
+      color: #FFFFFF;
+    }
+
+    .thankyou-status > div strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 2px;
+    }
+
+    .thankyou-status > div span {
+      display: block;
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.88);
+      font-weight: 500;
+    }
+
+    /* Important Alert */
+    .thankyou-important {
+      margin: 1.4rem 0;
+      padding: 0.85rem 1rem;
+      background: #FFFBEB;
+      border-left: 4px solid var(--color-gold-dark);
+      border-radius: 12px;
+      color: #92400E;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .thankyou-important b {
+      color: #78350F;
+      font-weight: 700;
+    }
+
+    /* Next Steps Box */
+    .thankyou-next {
+      margin: 1.6rem 0 1.4rem;
+      text-align: left;
+      background: #F8FAFC;
+      border: 1.5px solid rgba(30, 58, 95, 0.1);
+      border-radius: 18px;
+      padding: 1.2rem 1.2rem 1.3rem;
+    }
+
+    .thankyou-next h3 {
+      color: var(--color-navy);
+      font-size: 1.22rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .thankyou-next ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .thankyou-next li {
+      position: relative;
+      padding-left: 1.6rem;
+      margin-bottom: 0.6rem;
+      color: rgba(30, 58, 95, 0.9);
+      font-size: 0.94rem;
+      line-height: 1.45;
+    }
+
+    .thankyou-next li:last-child {
+      margin-bottom: 0;
+    }
+
+    .thankyou-next li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--color-green);
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    /* Note Banner */
+    .thankyou-note {
+      margin: 1.3rem 0;
+      padding: 0.85rem 1rem;
+      border-radius: 14px;
+      background: #EBF5FF;
+      border: 1px solid rgba(30, 58, 95, 0.15);
+      color: var(--color-navy);
+      font-weight: 600;
+      font-size: 0.94rem;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    /* Footer */
+    .thankyou-footer {
+      margin-top: 1.8rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(30, 58, 95, 0.1);
+      color: rgba(30, 58, 95, 0.6);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-wrapper">
+    <div class="thankyou-card">
+      <a class="thankyou-back" href="index.html">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        <span>वापस जाएँ</span>
+      </a>
+
+      <div class="thankyou-content">
+        <div class="thankyou-check" aria-label="Order Placed">
+          <i class="fa-solid fa-check" aria-hidden="true"></i>
+        </div>
+
+        <h1>बधाई हो!</h1>
+        <h2>आपका ऑर्डर सफलतापूर्वक प्राप्त हो गया है</h2>
+        <p>हमारी टीम WhatsApp / कॉल के माध्यम से जल्द ही आपसे संपर्क करेगी।</p>
+
+        <!-- Product to Delivery Pipeline -->
+        <div class="thankyou-product-row">
+          <div class="thankyou-product">
+            <div class="thankyou-product-img-wrap">
+              <img src="images/product.jpeg" alt="EyeCare Drops Product">
+            </div>
+            <strong>Product</strong>
+          </div>
+
+          <div class="thankyou-arrow">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </div>
+
+          <div class="thankyou-delivery">
+            <div class="thankyou-delivery-icon-wrap">
+              <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+            </div>
+            <strong>Delivery</strong>
+          </div>
+        </div>
+
+        <!-- Order Status -->
+        <div class="thankyou-status">
+          <div>
+            <strong>आपका ऑर्डर</strong>
+            <span>Order Placed</span>
+          </div>
+          <div>
+            <strong>डिस्पैच</strong>
+            <span>In Dispatch</span>
+          </div>
+        </div>
+
+        <!-- Important Notice -->
+        <p class="thankyou-important">
+          <b>⚠️ Important:</b> अगर आपने गलत मोबाइल नंबर या एड्रेस डाला है, तो कृपया तुरंत रिप्लाई करके सही डिटेल्स भेजें।
+        </p>
+
+        <!-- Next Steps -->
+        <div class="thankyou-next">
+          <h3>आगे क्या होगा?</h3>
+          <ul>
+            <li>24 घंटे के अंदर कॉल करके ऑर्डर confirm करेंगे</li>
+            <li>आपके पते की पुष्टि करके डिलीवरी तय करेंगे</li>
+            <li>3-5 दिनों में <b>EyeCare Drops</b> आपके घर पहुँचेगा</li>
+            <li>COD - डिलीवरी के समय पैसा दें</li>
+          </ul>
+        </div>
+
+        <!-- Confirmation Note -->
+        <div class="thankyou-note">
+          हमारी टीम डिलीवरी कन्फर्म करने के लिए आपसे संपर्क करेगी।
+        </div>
+
+        <!-- Footer -->
+        <footer class="thankyou-footer">
+          EyeCare Drops © All Rights Reserved
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

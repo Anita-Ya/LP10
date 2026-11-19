@@ -1,0 +1,3143 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#F4F6F8">
+    <title>आँखों की देखभाल</title>
+    <style>
+:root {
+  color-scheme: light;
+  --color-background: #F4F6F8;
+  --color-navy: #1E3A5F;
+  --color-cta: #FFC107;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-navy);
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  width: 100%;
+  max-width: 450px;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--color-background);
+  padding-bottom: 70px;
+}
+
+.banner-section {
+  width: 100%;
+}
+
+.banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.banner-error {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  text-align: center;
+}
+
+.symptoms-section {
+  position: relative;
+  isolation: isolate;
+  padding: 1.6rem 1rem;
+  overflow: hidden;
+  background: var(--color-navy);
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-cta);
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.symptoms-section h1 {
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.55rem, 7vw, 2rem);
+  line-height: 1.35;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.section-intro {
+  max-width: 21rem;
+  margin: 0.8rem auto 2rem;
+  color: rgba(244, 246, 248, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.symptom-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.symptom-card {
+  position: relative;
+  display: flex;
+  min-height: 275px;
+  width: 92%;
+  margin: 0;
+  padding: 1.25rem 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: #fff;
+  filter: drop-shadow(0 8px 10px rgba(30, 58, 95, 0.13));
+  clip-path: polygon(9% 0, 91% 0, 100% 50%, 91% 100%, 9% 100%, 0 50%);
+  animation: card-rise 0.7s ease both;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.symptom-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.symptom-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.symptom-card:nth-child(4) {
+  animation-delay: 0.36s;
+}
+
+.symptom-card:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+.symptom-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  filter: drop-shadow(0 14px 18px rgba(30, 58, 95, 0.2));
+}
+
+@keyframes card-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.symptom-image {
+  display: block;
+  width: 190px;
+  height: 120px;
+  margin-bottom: 0.35rem;
+  border: 4px solid #fff;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 5px 12px rgba(30, 58, 95, 0.18);
+}
+
+.symptom-card:nth-child(even) {
+  margin-left: auto;
+  background: #fffdf6;
+}
+
+.symptom-card:nth-child(6) {
+  display: none;
+}
+
+.symptom-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: var(--color-navy);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.symptom-number {
+  display: none;
+  color: var(--color-navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  opacity: 0.62;
+}
+
+.symptom-card h2 {
+  max-width: 17rem;
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 1.3rem;
+  line-height: 1.45;
+}
+
+.product-section {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 1.2rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  text-align: center;
+  animation: product-section-in 0.8s ease both;
+}
+
+.product-section::before,
+.product-section::after {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(30, 58, 95, 0.06);
+  content: "";
+}
+
+.product-section::before {
+  width: 230px;
+  height: 230px;
+  top: -90px;
+  right: -80px;
+}
+
+.product-section::after {
+  width: 170px;
+  height: 170px;
+  bottom: -80px;
+  left: -70px;
+}
+
+.product-copy,
+.product-visual,
+.product-features {
+  position: relative;
+  z-index: 1;
+}
+
+.product-copy {
+  animation: product-copy-in 0.7s ease both;
+}
+
+.product-kicker {
+  display: none;
+  margin: 0 0 0.3rem;
+  color: rgba(30, 58, 95, 0.72);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.product-section h2 {
+  margin: 0;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(2.2rem, 11vw, 3.2rem);
+  line-height: 1;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.product-description {
+  max-width: 25rem;
+  margin: 0.9rem auto 0;
+  color: rgba(30, 58, 95, 0.92);
+  font-size: clamp(1.15rem, 3.8vw, 1.28rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.product-visual {
+  height: 300px;
+  margin: 1.2rem auto 1.4rem;
+  border: 8px solid #55a650;
+  border-radius: 28px;
+  background: url("images/product.jpeg") center / cover no-repeat;
+  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.2);
+  animation: product-image-in 0.9s ease 0.2s both;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.product-visual::before {
+  position: absolute;
+  inset: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  content: "";
+  pointer-events: none;
+}
+
+.product-visual::after {
+  display: none;
+}
+
+.product-visual:hover {
+  transform: scale(1.025);
+  box-shadow: 0 18px 30px rgba(30, 58, 95, 0.28);
+}
+
+.product-visual>* {
+  display: none;
+}
+
+.dropper-cap,
+.dropper-neck,
+.dropper-bottle,
+.bottle-shadow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropper-cap {
+  top: 16px;
+  width: 58px;
+  height: 78px;
+  border-radius: 28px 28px 12px 12px;
+  background: linear-gradient(90deg, #f7f8fa, #aeb4c0 48%, #ffffff 75%);
+  box-shadow: 0 8px 12px rgba(110, 35, 65, 0.2);
+}
+
+.dropper-neck {
+  top: 82px;
+  width: 86px;
+  height: 42px;
+  border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(90deg, #b1b4bd, #ffffff 45%, #858995);
+}
+
+.dropper-bottle {
+  top: 112px;
+  width: 148px;
+  height: 142px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  border-radius: 32px 32px 42px 42px;
+  background: linear-gradient(90deg, #c85e7f, #f6b0c1 42%, #bd5277);
+  box-shadow: inset 18px 0 18px rgba(255, 255, 255, 0.25), 0 14px 18px rgba(110, 35, 65, 0.25);
+}
+
+.bottle-label {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  width: 105px;
+  padding: 0.45rem 0.2rem;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: #fff5e8;
+  color: #8b3555;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.bottle-label small {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+}
+
+.bottle-shadow {
+  bottom: 19px;
+  width: 220px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(117, 37, 68, 0.28);
+}
+
+.product-sparkle {
+  position: absolute;
+  color: #fff7d8;
+  font-size: 2rem;
+}
+
+.sparkle-one {
+  top: 70px;
+  left: 14%;
+}
+
+.sparkle-two {
+  right: 13%;
+  bottom: 68px;
+}
+
+.product-features {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-features span {
+  min-height: 72px;
+  display: grid;
+  place-items: center;
+  padding: 0.75rem 0.5rem;
+  border: 1.5px solid rgba(30, 58, 95, 0.18);
+  border-radius: 18px;
+  background: #ffffff;
+  color: var(--color-navy);
+  font-size: clamp(0.92rem, 2.7vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.35;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.06);
+  animation: feature-in 0.6s ease both;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.product-features span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.product-features span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.product-features span:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+}
+
+.product-features b {
+  display: none;
+}
+
+@keyframes product-section-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes product-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes product-image-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes feature-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.care-section {
+  padding: 1.4rem 1rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+}
+
+.care-kicker {
+  display: none;
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.care-section>h2 {
+  max-width: 22rem;
+  margin: 0 auto 1rem;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.55rem, 7vw, 2rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.care-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.care-item {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.care-item:nth-child(even) {
+  grid-template-columns: 1fr 88px;
+}
+
+.care-item:nth-child(even) .care-number {
+  order: 2;
+}
+
+.care-number {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  place-items: center;
+  border: 3px solid var(--color-navy);
+  border-radius: 50%;
+  background: var(--color-cta);
+  color: var(--color-navy);
+  font-size: 1.7rem;
+  font-weight: 800;
+  box-shadow: 0 7px 0 rgba(30, 58, 95, 0.12);
+}
+
+.care-content {
+  display: grid;
+  grid-template-columns: 40% minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 170px;
+  min-width: 0;
+  padding: 0.85rem 0.8rem;
+  border: 1px solid rgba(30, 58, 95, 0.13);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(30, 58, 95, 0.08);
+  overflow: hidden;
+}
+
+.care-image {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  border-radius: 12px;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.care-content h3,
+.care-content p {
+  grid-column: 2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ingredients-section {
+  position: relative;
+  padding: 1.4rem 0.85rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  overflow: hidden;
+}
+
+.ingredients-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.ingredients-section>h2 {
+  max-width: 24rem;
+  margin: 0 auto 1.4rem;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.4rem, 6.8vw, 1.95rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.ingredients-intro {
+  max-width: 22rem;
+  margin: 0.9rem auto 2.2rem;
+  color: rgba(30, 58, 95, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Plant Infographic Stage (Infographic Concept from Reference) */
+.plant-stage {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+/* Stems SVG background layer connecting to leaves */
+.plant-svg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.plant-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 2-Column Staggered Grid for Natural Organic Growth */
+.leaves-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.leaves-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.leaves-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 50px;
+  /* Staggered downward like the reference illustration */
+}
+
+/* Organic Speech-Bubble Leaf Cards (White + Navy + Gold Page Palette) */
+.plant-leaf {
+  position: relative;
+  padding: 0.65rem;
+  text-align: left;
+  background: #ffffff;
+  border: 2px solid rgba(30, 58, 95, 0.12);
+  box-shadow: 0 10px 22px rgba(30, 58, 95, 0.08);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.plant-leaf:hover {
+  box-shadow: 0 16px 28px rgba(30, 58, 95, 0.16);
+  border-color: var(--color-cta);
+}
+
+/* 1. Leaf 1 (Top-Left) */
+.leaf-1 {
+  border-radius: 36px 36px 12px 36px / 32px 32px 18px 32px;
+  transform: rotate(-2deg);
+}
+
+.leaf-1:hover {
+  transform: rotate(-2deg) translateY(-5px) scale(1.02);
+}
+
+/* 2. Leaf 2 (Top-Right) */
+.leaf-2 {
+  border-radius: 36px 36px 36px 12px / 32px 32px 32px 18px;
+  transform: rotate(2.5deg);
+}
+
+.leaf-2:hover {
+  transform: rotate(2.5deg) translateY(-5px) scale(1.02);
+}
+
+/* 3. Leaf 3 (Mid-Left) */
+.leaf-3 {
+  border-radius: 36px 36px 12px 36px / 32px 32px 18px 32px;
+  transform: rotate(1.5deg);
+}
+
+.leaf-3:hover {
+  transform: rotate(1.5deg) translateY(-5px) scale(1.02);
+}
+
+/* 4. Leaf 4 (Bottom-Right) */
+.leaf-4 {
+  border-radius: 36px 36px 36px 12px / 32px 32px 32px 18px;
+  transform: rotate(-1.5deg);
+}
+
+.leaf-4:hover {
+  transform: rotate(-1.5deg) translateY(-5px) scale(1.02);
+}
+
+/* Much Bigger Image Container */
+.leaf-image-container {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.1);
+  background: #f0f3f6;
+  flex-shrink: 0;
+}
+
+.leaf-1 .leaf-image-container,
+.leaf-3 .leaf-image-container {
+  border-radius: 28px 28px 10px 28px;
+}
+
+.leaf-2 .leaf-image-container,
+.leaf-4 .leaf-image-container {
+  border-radius: 28px 28px 28px 10px;
+}
+
+.leaf-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.plant-leaf:hover .leaf-img {
+  transform: scale(1.06);
+}
+
+/* Content Area */
+.leaf-body {
+  padding: 0.8rem 0.5rem 0.6rem;
+}
+
+.leaf-title {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.25rem, 5.2vw, 1.4rem);
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.25;
+}
+
+.leaf-desc {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: rgba(30, 58, 95, 0.84);
+  font-weight: 500;
+}
+
+/* Terracotta / Navy Pot Base in Site Palette */
+.pot-wrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pot-svg {
+  width: 112px;
+  height: 96px;
+  display: block;
+  filter: drop-shadow(0 10px 14px rgba(30, 58, 95, 0.16));
+}
+
+.pot-floor-line {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(30, 58, 95, 0.2) 25%, var(--color-navy) 50%, rgba(30, 58, 95, 0.2) 75%, transparent 100%);
+  margin-top: -3px;
+  border-radius: 2px;
+}
+
+/* =========================================================
+   Daily Routine Timeline Section (थकी आँखों से तरोताज़ा एहसास)
+   ========================================================= */
+
+.routine-section {
+  position: relative;
+  padding: 1.4rem 1rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  overflow: hidden;
+}
+
+.routine-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.routine-section>h2 {
+  max-width: 24rem;
+  margin: 0 auto 1.4rem;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.4rem, 6.8vw, 1.95rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.routine-intro {
+  max-width: 22rem;
+  margin: 0.9rem auto 2.2rem;
+  color: rgba(30, 58, 95, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Timeline Layout */
+.routine-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/* Vertical Dashed Track Line */
+.routine-timeline::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  bottom: 36px;
+  left: 23px;
+  /* Centered through the 46px node column */
+  width: 0;
+  border-left: 2.5px dashed rgba(30, 58, 95, 0.28);
+  z-index: 1;
+}
+
+/* Timeline Item (Node + Card) */
+.routine-item {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Timeline Icon Node Badges in Page Palette (Navy + Gold) */
+.routine-node {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  border: 2.5px solid var(--color-cta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.25), 0 0 10px rgba(255, 193, 7, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.routine-item:hover .routine-node {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(30, 58, 95, 0.3), 0 0 14px rgba(255, 193, 7, 0.45);
+}
+
+/* Routine Card */
+.routine-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0.95rem 1rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(30, 58, 95, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.routine-card:hover {
+  transform: translateX(4px) translateY(-2px);
+  box-shadow: 0 12px 24px rgba(30, 58, 95, 0.12);
+  border-color: var(--color-cta);
+}
+
+/* Card Content */
+.routine-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.routine-time {
+  margin: 0 0 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+.routine-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.48;
+  color: rgba(30, 58, 95, 0.82);
+}
+
+.routine-desc b {
+  color: var(--color-navy);
+}
+
+/* Thumbnail with Page Theme Gold Ring */
+.routine-media {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  border-radius: 18px;
+  padding: 2px;
+  background: #ffffff;
+  border: 2.5px solid var(--color-cta);
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.1);
+}
+
+.routine-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* =========================================================
+   Trust & Certifications Section (गुणवत्ता और पारदर्शिता का भरोसा)
+   ========================================================= */
+
+.trust-section {
+  position: relative;
+  padding: 1.4rem 1rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  text-align: center;
+  overflow: hidden;
+}
+
+.trust-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.trust-section>h2 {
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.4rem, 6.8vw, 1.95rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.trust-intro {
+  max-width: 22rem;
+  margin: 0.9rem auto 2.2rem;
+  color: rgba(30, 58, 95, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* 2x2 Grid for Certifications */
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  max-width: 430px;
+  margin: 1.4rem auto 0;
+}
+
+.trust-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 200px;
+  padding: 1.3rem 0.65rem 1.2rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(30, 58, 95, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 8px 18px rgba(30, 58, 95, 0.06);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-cta);
+  box-shadow: 0 14px 26px rgba(30, 58, 95, 0.12);
+}
+
+/* Top corner verified check */
+.trust-badge-seal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  border: 1.5px solid var(--color-cta);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+
+.trust-check {
+  color: var(--color-cta);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* Image Wrapper: Unified & Significantly Larger */
+.trust-img-wrap {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.65rem;
+  overflow: hidden;
+}
+
+.trust-cert-img {
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+/* Optical Calibration so all 4 logos appear mathematically equal in visual size */
+.cert-img-gmp {
+  width: auto;
+  height: 135px;
+  max-width: none;
+}
+
+.cert-img-iso {
+  width: auto;
+  height: 122px;
+  max-width: none;
+}
+
+.cert-img-fssai {
+  width: 136px;
+  height: auto;
+  max-width: none;
+  transform: scale(1.1);
+}
+
+.cert-img-lab {
+  width: auto;
+  height: 120px;
+  max-width: none;
+}
+
+.trust-card:hover .cert-img-gmp {
+  transform: scale(1.08);
+}
+
+.trust-card:hover .cert-img-iso {
+  transform: scale(1.08);
+}
+
+.trust-card:hover .cert-img-fssai {
+  transform: scale(1.18);
+}
+
+.trust-card:hover .cert-img-lab {
+  transform: scale(1.08);
+}
+
+.trust-card-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.25;
+}
+
+/* 3 Pills at bottom */
+.trust-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.trust-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.65rem 0.4rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(30, 58, 95, 0.12);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.05);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.trust-pill:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-cta);
+}
+
+.trust-pill-icon {
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   Section 8: Order Now / Lead Inquiry Form
+   ========================================================= */
+
+.order-section {
+  position: relative;
+  padding: 1.4rem 1rem 1.6rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  text-align: center;
+  overflow: hidden;
+}
+
+.order-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.order-section>h2 {
+  max-width: 24rem;
+  margin: 0 auto 1.3rem;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.4rem, 6.8vw, 1.95rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.order-intro {
+  max-width: 22rem;
+  margin: 0.9rem auto 2.2rem;
+  color: rgba(30, 58, 95, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Card Container */
+.order-card-container {
+  max-width: 430px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px solid rgba(30, 58, 95, 0.12);
+  border-radius: 24px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 12px 28px rgba(30, 58, 95, 0.08);
+  text-align: left;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.15rem;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-navy);
+  margin-bottom: 0.45rem;
+}
+
+.required-star {
+  color: #e53935;
+  font-weight: 800;
+}
+
+/* Input Fields */
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1.1rem;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px 0 42px;
+  border: 1.5px solid rgba(30, 58, 95, 0.18);
+  border-radius: 14px;
+  font-size: 0.92rem;
+  color: var(--color-navy);
+  background: #fbfcfd;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-sizing: border-box;
+}
+
+.form-input.has-prefix {
+  padding-left: 48px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-cta);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.25);
+  background: #ffffff;
+}
+
+.form-input::placeholder {
+  color: rgba(30, 58, 95, 0.45);
+  font-size: 0.88rem;
+}
+
+/* Inquiry Multi-select Pills */
+.inquiry-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 0.35rem;
+}
+
+.option-pill {
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+
+.option-pill input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pill-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 46px;
+  padding: 0.45rem 0.6rem;
+  border: 1.5px solid rgba(30, 58, 95, 0.14);
+  border-radius: 12px;
+  background: #f8fafc;
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.option-pill input:checked+.pill-badge {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.2);
+}
+
+.option-pill input:checked+.pill-badge::before {
+  content: "✓ ";
+  color: var(--color-cta);
+  font-weight: 800;
+  margin-right: 4px;
+}
+
+/* CTA Submit Button */
+.order-submit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 52px;
+  margin-top: 0.85rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-cta);
+  color: var(--color-navy);
+  font-size: 1.15rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 193, 7, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.order-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(255, 193, 7, 0.45);
+  filter: brightness(1.02);
+}
+
+.btn-arrow {
+  font-size: 1.25rem;
+  transition: transform 0.25s ease;
+}
+
+.order-submit-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Trust Bar Under CTA */
+.order-trust-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 1rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(30, 58, 95, 0.75);
+  text-align: center;
+}
+
+.footer-dot {
+  opacity: 0.4;
+}
+
+/* =========================================================
+   Testimonials Section (ग्राहकों के वास्तविक अनुभव)
+   ========================================================= */
+
+.testimonials-section {
+  position: relative;
+  padding: 1.4rem 1rem 1.6rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  text-align: center;
+  overflow: hidden;
+}
+
+.testimonials-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.testimonials-section>h2 {
+  max-width: 24rem;
+  margin: 0 auto 1.4rem;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.4rem, 6.8vw, 1.95rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.testimonials-intro {
+  max-width: 22rem;
+  margin: 0.9rem auto 1.4rem;
+  color: rgba(30, 58, 95, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Rating Overview Banner */
+.rating-overview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.55rem 1.15rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(30, 58, 95, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(30, 58, 95, 0.05);
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--color-navy);
+}
+
+.rating-stars {
+  color: var(--color-cta);
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+}
+
+.rating-score b {
+  font-weight: 800;
+}
+
+.rating-separator {
+  opacity: 0.35;
+}
+
+.rating-count {
+  color: rgba(30, 58, 95, 0.8);
+  font-weight: 600;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  position: relative;
+  text-align: left;
+  padding: 1.35rem 1.2rem;
+  background: #ffffff;
+  border: 2px solid rgba(30, 58, 95, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 10px 22px rgba(30, 58, 95, 0.06);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-cta);
+  box-shadow: 0 16px 28px rgba(30, 58, 95, 0.12);
+}
+
+/* Watermark Quote */
+.quote-watermark {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  font-size: 5rem;
+  font-family: Georgia, serif;
+  color: rgba(30, 58, 95, 0.06);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Header (Avatar + Meta) */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.7rem;
+}
+
+.testimonial-avatar-wrap {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  border-radius: 50%;
+  padding: 2.5px;
+  background: #ffffff;
+  border: 2.5px solid var(--color-cta);
+  box-shadow: 0 4px 10px rgba(30, 58, 95, 0.12);
+  flex-shrink: 0;
+}
+
+.testimonial-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonial-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.testimonial-name {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.25;
+}
+
+.verified-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.68rem;
+  font-weight: 800;
+  border-radius: 999px;
+  border: 1px solid #c8e6c9;
+}
+
+.testimonial-place {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: rgba(30, 58, 95, 0.72);
+  font-weight: 600;
+}
+
+/* Stars */
+.testimonial-stars {
+  color: var(--color-cta);
+  letter-spacing: 2px;
+  font-size: 1.05rem;
+  margin-bottom: 0.65rem;
+}
+
+/* Feedback Text */
+.testimonial-text {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(30, 58, 95, 0.86);
+  font-weight: 500;
+}
+
+/* ========================================================
+   SECTION 10: FAQS
+   ======================================================== */
+.faqs-section {
+  position: relative;
+  padding: 1.2rem 1rem 0.5rem;
+  background: var(--color-background);
+  color: var(--color-navy);
+  text-align: center;
+  overflow: hidden;
+}
+
+.faqs-section>h2 {
+  max-width: 24rem;
+  margin: 0 auto 1.4rem;
+  padding: 0.7rem 1rem 0.8rem;
+  border-bottom: 5px solid var(--color-cta);
+  border-radius: 18px;
+  background: var(--color-navy);
+  color: var(--color-cta);
+  font-size: clamp(1.4rem, 6.8vw, 1.95rem);
+  line-height: 1.3;
+  text-align: center;
+  box-shadow: 0 8px 0 rgba(255, 193, 7, 0.22);
+}
+
+.faqs-container {
+  max-width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1.5px solid rgba(30, 58, 95, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(30, 58, 95, 0.05);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item[open] {
+  border-color: rgba(30, 58, 95, 0.28);
+  box-shadow: 0 6px 18px rgba(30, 58, 95, 0.08);
+}
+
+.faq-question {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.15rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question:hover {
+  background: rgba(244, 246, 248, 0.5);
+}
+
+.faq-icon {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease;
+  line-height: 1;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+  color: #D48800;
+}
+
+.faq-answer {
+  padding: 0.75rem 1.15rem 1.05rem;
+  color: rgba(30, 58, 95, 0.88);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  border-top: 1px dashed rgba(30, 58, 95, 0.1);
+  background: #FCFDFE;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* ========================================================
+   SECTION 11: DISCLAIMER BOX (Matching Reference)
+   ======================================================== */
+.disclaimer-section {
+  position: relative;
+  padding: 0.4rem 1rem 0.5rem;
+  background: var(--color-background);
+}
+
+.disclaimer-box {
+  max-width: 430px;
+  margin: 0 auto;
+  background: rgba(255, 245, 245, 0.65);
+  border-radius: 10px;
+  padding: 0.75rem 0.95rem;
+  text-align: left;
+}
+
+.disclaimer-box p {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #94A3B8;
+  opacity: 0.88;
+}
+
+.disclaimer-box strong {
+  color: #64748B;
+  font-weight: 600;
+}
+
+.site-footer {
+  margin-top: 0.75rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #E2E8F0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px 8px;
+}
+
+.footer-link-btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #3182CE;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s ease;
+}
+
+.footer-link-btn:hover {
+  color: #1E3A5F;
+}
+
+.footer-pipe {
+  color: #CBD5E0;
+  font-size: 0.82rem;
+  user-select: none;
+}
+
+/* ========================================================
+   POLICY MODALS
+   ======================================================== */
+.policy-modal {
+  position: fixed;
+  z-index: 1200;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(30, 41, 59, 0.72);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.25s ease both;
+}
+
+.policy-modal[hidden] {
+  display: none;
+}
+
+.policy-dialog {
+  width: min(calc(100vw - 32px), 480px);
+  max-height: min(85vh, 600px);
+  overflow: hidden;
+  border: 1.5px solid rgba(30, 58, 95, 0.15);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+  display: flex;
+  flex-direction: column;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.policy-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid #F1F5F9;
+  background: #FFFFFF;
+}
+
+.policy-dialog-header h2 {
+  margin: 0;
+  color: #1E293B;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.policy-close {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #FCE4EC;
+  color: #C2185B;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.policy-close:hover {
+  transform: scale(1.08);
+  background: #F8BBD0;
+}
+
+.policy-dialog-body {
+  max-height: calc(min(85vh, 600px) - 72px);
+  overflow-y: auto;
+  padding: 18px 22px 24px;
+  color: #374151;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.policy-dialog-body p {
+  margin: 0 0 12px;
+}
+
+.policy-dialog-body ul {
+  list-style: none;
+  margin: 10px 0 16px;
+  padding: 0;
+}
+
+.policy-dialog-body li {
+  position: relative;
+  padding: 6px 0 6px 18px;
+  border-bottom: 1px dashed #E2E8F0;
+  font-size: 0.92rem;
+  color: #4B5563;
+}
+
+.policy-dialog-body li:last-child {
+  border-bottom: none;
+}
+
+.policy-dialog-body li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  font-weight: 900;
+  color: #1E3A5F;
+}
+
+.policy-dialog-body strong {
+  color: #1F2937;
+  display: block;
+  margin: 14px 0 8px;
+  font-weight: 700;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ========================================================
+   STICKY BOTTOM ORDER BAR
+   ======================================================== */
+.sticky-order-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  border-top: 1px solid rgba(30, 58, 95, 0.12);
+  box-shadow: 0 -4px 20px rgba(30, 58, 95, 0.15);
+  padding: 0.6rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 999;
+}
+
+.sticky-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 0;
+}
+
+.sticky-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sticky-leaf-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.sticky-brand-name {
+  color: var(--color-navy);
+  font-family: 'Georgia', 'Noto Sans Devanagari', serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.sticky-brand-sub {
+  margin: 2px 0 0;
+  color: rgba(30, 58, 95, 0.82);
+  font-size: 0.73rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-order-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-navy);
+  border: 1px solid #142842;
+  border-radius: 999px;
+  padding: 0.38rem 1.05rem 0.38rem 0.45rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(30, 58, 95, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sticky-order-btn:hover,
+.sticky-order-btn:active {
+  background: #142842;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 58, 95, 0.45);
+}
+
+.sticky-cart-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--color-cta);
+  display: grid;
+  place-items: center;
+  margin-right: 8px;
+  background: rgba(255, 193, 7, 0.12);
+  color: var(--color-cta);
+  font-size: 0.88rem;
+  flex-shrink: 0;
+}
+
+.sticky-btn-text {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 360px) {
+  .symptoms-section {
+    padding-right: 0.65rem;
+    padding-left: 0.65rem;
+  }
+
+  .symptom-card {
+    width: 96%;
+    padding-right: 1.7rem;
+    padding-left: 1.7rem;
+  }
+
+  .ingredients-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .leaves-grid {
+    gap: 8px;
+  }
+
+  .plant-leaf {
+    padding: 0.5rem;
+  }
+
+  .leaf-image-container {
+    height: 125px;
+  }
+
+  .leaf-title {
+    font-size: 1.18rem;
+  }
+
+  .leaf-desc {
+    font-size: 0.88rem;
+  }
+
+  .routine-section {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  .routine-item {
+    gap: 10px;
+    grid-template-columns: 40px 1fr;
+  }
+
+  .routine-timeline::before {
+    left: 20px;
+  }
+
+  .routine-node {
+    width: 40px;
+    height: 40px;
+  }
+
+  .routine-card {
+    padding: 0.8rem 0.75rem;
+  }
+
+  .routine-media {
+    width: 66px;
+    height: 66px;
+    min-width: 66px;
+  }
+
+  .routine-time {
+    font-size: 1.15rem;
+  }
+
+  .routine-desc {
+    font-size: 0.78rem;
+  }
+
+  .trust-section {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  .trust-grid {
+    gap: 10px;
+  }
+
+  .trust-card {
+    min-height: 185px;
+    padding: 1.15rem 0.45rem 1rem;
+  }
+
+  .trust-img-wrap {
+    width: 108px;
+    height: 108px;
+    margin-bottom: 0.55rem;
+  }
+
+  .cert-img-gmp {
+    height: 122px;
+    width: auto;
+  }
+
+  .cert-img-iso {
+    height: 110px;
+    width: auto;
+  }
+
+  .cert-img-fssai {
+    width: 122px;
+    height: auto;
+    transform: scale(1.1);
+  }
+
+  .cert-img-lab {
+    height: 108px;
+    width: auto;
+  }
+
+  .trust-card-title {
+    font-size: 1.05rem;
+  }
+
+  .trust-features {
+    gap: 6px;
+  }
+
+  .trust-pill {
+    padding: 0.55rem 0.25rem;
+    font-size: 0.7rem;
+  }
+
+  .order-section {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  .order-card-container {
+    padding: 1.2rem 0.9rem;
+  }
+
+  .inquiry-options {
+    grid-template-columns: 1fr;
+  }
+
+  .order-submit-btn {
+    font-size: 1.05rem;
+    height: 48px;
+  }
+
+  .testimonials-section {
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+
+  .testimonial-card {
+    padding: 1.1rem 0.95rem;
+  }
+
+  .testimonial-avatar-wrap {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .testimonial-name {
+    font-size: 1.05rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.84rem;
+  }
+
+  .sticky-brand-name {
+    font-size: 0.98rem;
+  }
+
+  .sticky-brand-sub {
+    font-size: 0.68rem;
+  }
+
+  .sticky-btn-text {
+    font-size: 0.88rem;
+  }
+
+  .sticky-cart-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+    font-size: 0.8rem;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="banner-section" aria-label="आँखों की देखभाल">
+        <img
+          class="banner-image"
+          src="images/banner.png"
+          alt="आँखों की जलन, सूखापन और भारीपन के कारणों और आँखों की देखभाल के बारे में जानकारी"
+        >
+        <p class="banner-error" role="alert" hidden>
+          Banner load nahi ho paya. Kripya images/banner.png file check karein.
+        </p>
+      </section>
+
+      <section class="symptoms-section" aria-labelledby="symptoms-title">
+        <!-- <p class="section-eyebrow">आँखों की सेहत</p> -->
+        <h1 id="symptoms-title">आँखों की असहजता से होने वाली परेशानियाँ</h1>
+        <!-- <p class="section-intro">इन आम संकेतों को पहचानें और अपनी आँखों का ध्यान रखें।</p> -->
+
+        <ol class="symptom-list">
+          <li class="symptom-card">
+            <span class="symptom-number">01</span>
+            <h2>आँखों में लालिमा दिखना</h2>
+          </li>
+          <li class="symptom-card">
+            <span class="symptom-number">02</span>
+            <h2>जलन और चुभन महसूस होना</h2>
+          </li>
+          <li class="symptom-card">
+            <span class="symptom-number">03</span>
+            <h2>आँखों का सूखापन और किरकिरापन</h2>
+          </li>
+          <li class="symptom-card">
+            <span class="symptom-number">04</span>
+            <h2>बार-बार आँखों से पानी आना</h2>
+          </li>
+          <li class="symptom-card">
+            <span class="symptom-number">05</span>
+            <h2>स्क्रीन देखने के बाद आँखों में थकान और भारीपन</h2>
+          </li>
+        </ol>
+      </section>
+
+      <section class="product-section" aria-labelledby="product-title">
+        <div class="product-copy">
+          <p class="product-kicker">SS Herbal India</p>
+          <h2 id="product-title">EyeCare Drops</h2>
+          <p class="product-description">Ayurvedic herbs से तैयार eye care formulation, जो आँखों की रोज़ाना देखभाल के लिए बनाया गया है।</p>
+        </div>
+
+        <div class="product-visual" aria-label="EyeCare Drops bottle illustration">
+          <span class="product-sparkle sparkle-one">✦</span>
+          <span class="product-sparkle sparkle-two">✦</span>
+          <div class="dropper-cap"></div>
+          <div class="dropper-neck"></div>
+          <div class="dropper-bottle">
+            <span class="bottle-label">EyeCare<br><small>DROPS</small></span>
+          </div>
+          <div class="bottle-shadow"></div>
+        </div>
+
+        <div class="product-features" aria-label="Product features">
+          <span>Herbal Ingredients</span>
+          <span>Herbal Formulation</span>
+          <span>आसान उपयोग <b>(10ml)</b></span>
+        </div>
+      </section>
+
+      <section class="care-section" aria-labelledby="care-title">
+        <p class="care-kicker">आँखों की देखभाल</p>
+        <h2 id="care-title">EyeCare कैसे काम करता है?</h2>
+
+        <div class="care-list">
+          <article class="care-item">
+            <div class="care-number">01</div>
+            <div class="care-content">
+              <h3>Eye Comfort</h3>
+              <p>आँखों के रूखेपन, जलन और चुभन में राहत देने में सहायक।</p>
+            </div>
+          </article>
+          <article class="care-item">
+            <div class="care-number">02</div>
+            <div class="care-content">
+              <h3>Screen Fatigue Care</h3>
+              <p>लंबे समय तक स्क्रीन देखने से थकी आँखों को आराम देने में सहायक।</p>
+            </div>
+          </article>
+          <article class="care-item">
+            <div class="care-number">03</div>
+            <div class="care-content">
+              <h3>Dust &amp; Pollution Care</h3>
+              <p>धूल-मिट्टी और प्रदूषण से होने वाली असहजता में उचित देखभाल।</p>
+            </div>
+          </article>
+          <article class="care-item">
+            <div class="care-number">04</div>
+            <div class="care-content">
+              <h3>Healthy Eye Routine</h3>
+              <p>रोज़ाना आँखों की देखभाल की आदत, स्क्रीन ब्रेक और संतुलित दिनचर्या के साथ।</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="ingredients-section" aria-labelledby="ingredients-title">
+        <h2 id="ingredients-title">उत्पाद में मौजूद वास्तविक Ayurvedic ingredients</h2>
+
+        <div class="plant-stage">
+          <!-- Stems SVG connecting into the leaves -->
+          <div class="plant-svg-wrap" aria-hidden="true">
+            <svg viewBox="0 0 400 420" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="stemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stop-color="#7ea84c" />
+                  <stop offset="45%" stop-color="#a6ce6f" />
+                  <stop offset="100%" stop-color="#cae69a" />
+                </linearGradient>
+                <linearGradient id="stemShade" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#699139" />
+                  <stop offset="35%" stop-color="#b2d979" />
+                  <stop offset="100%" stop-color="#5a802d" />
+                </linearGradient>
+              </defs>
+
+              <!-- Central Trunk from pot rim -->
+              <path d="M200 420 C198 360 196 300 198 230" stroke="url(#stemShade)" stroke-width="13" stroke-linecap="round" />
+              
+              <!-- Branch to Leaf 1 (Top Left) -->
+              <path d="M198 230 C194 150 160 100 110 65" stroke="url(#stemGrad)" stroke-width="9" stroke-linecap="round" />
+              
+              <!-- Branch to Leaf 2 (Top Right) -->
+              <path d="M198 230 C210 170 245 130 290 105" stroke="url(#stemGrad)" stroke-width="8.5" stroke-linecap="round" />
+              
+              <!-- Branch to Leaf 3 (Bottom Left) -->
+              <path d="M198 310 C185 270 155 245 110 225" stroke="url(#stemGrad)" stroke-width="8" stroke-linecap="round" />
+              
+              <!-- Branch to Leaf 4 (Bottom Right) -->
+              <path d="M199 350 C215 315 250 290 290 270" stroke="url(#stemGrad)" stroke-width="8" stroke-linecap="round" />
+
+              <!-- Tiny accent sprout leaflets -->
+              <path d="M196 175 Q176 160 182 145 Q198 158 196 175 Z" fill="#9ecc57" />
+              <path d="M202 190 Q222 175 220 160 Q205 175 202 190 Z" fill="#7cb844" />
+            </svg>
+          </div>
+
+          <!-- 4 Plant Leaves in Staggered Grid -->
+          <div class="leaves-grid">
+            <!-- Left Column: Bhringraj & Tulsi -->
+            <div class="leaves-col-left">
+              <article class="plant-leaf leaf-1">
+                <div class="leaf-image-container">
+                  <img src="images/braj.jpg" alt="भृंगराज" class="leaf-img" loading="lazy">
+                </div>
+                <div class="leaf-body">
+                  <h3 class="leaf-title">भृंगराज</h3>
+                  <p class="leaf-desc">आँखों की आरामदायक देखभाल में सहायक herbal ingredient।</p>
+                </div>
+              </article>
+
+              <article class="plant-leaf leaf-3">
+                <div class="leaf-image-container">
+                  <img src="images/tulsi.jpg" alt="तुलसी" class="leaf-img" loading="lazy">
+                </div>
+                <div class="leaf-body">
+                  <h3 class="leaf-title">तुलसी</h3>
+                  <p class="leaf-desc">प्राकृतिक देखभाल और freshness देने वाली पारंपरिक herb।</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Right Column: Rose & Punarnava -->
+            <div class="leaves-col-right">
+              <article class="plant-leaf leaf-2">
+                <div class="leaf-image-container">
+                  <img src="images/rose.jpg" alt="गुलाब फूल" class="leaf-img" loading="lazy">
+                </div>
+                <div class="leaf-body">
+                  <h3 class="leaf-title">गुलाब फूल</h3>
+                  <p class="leaf-desc">ताज़गी और soothing care के लिए जाना जाने वाला natural ingredient।</p>
+                </div>
+              </article>
+
+              <article class="plant-leaf leaf-4">
+                <div class="leaf-image-container">
+                  <img src="images/puna.jpg" alt="पुनर्नवा" class="leaf-img" loading="lazy">
+                </div>
+                <div class="leaf-body">
+                  <h3 class="leaf-title">पुनर्नवा</h3>
+                  <p class="leaf-desc">आँखों की healthy routine के लिए उपयोगी Ayurvedic herb।</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Flower Pot in Site Palette (Navy & Gold Accent) -->
+          <div class="pot-wrapper" aria-hidden="true">
+            <svg class="pot-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="potRimTheme" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2a5286" />
+                  <stop offset="40%" stop-color="#1E3A5F" />
+                  <stop offset="100%" stop-color="#12253d" />
+                </linearGradient>
+                <linearGradient id="potBodyTheme" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#162c47" />
+                  <stop offset="25%" stop-color="#1E3A5F" />
+                  <stop offset="55%" stop-color="#2a5286" />
+                  <stop offset="80%" stop-color="#1E3A5F" />
+                  <stop offset="100%" stop-color="#112237" />
+                </linearGradient>
+                <radialGradient id="potSoilTheme" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#3d5a80" />
+                  <stop offset="100%" stop-color="#12253d" />
+                </radialGradient>
+                <radialGradient id="potShadowTheme" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(30, 58, 95, 0.35)" />
+                  <stop offset="65%" stop-color="rgba(30, 58, 95, 0.12)" />
+                  <stop offset="100%" stop-color="rgba(30, 58, 95, 0)" />
+                </radialGradient>
+              </defs>
+
+              <!-- Floor shadow -->
+              <ellipse cx="60" cy="94" rx="42" ry="6" fill="url(#potShadowTheme)" />
+
+              <!-- Soil inside pot -->
+              <ellipse cx="60" cy="18" rx="36" ry="7" fill="url(#potSoilTheme)" />
+
+              <!-- Pot Body -->
+              <path d="M25 24 L35 84 Q36 89 42 89 L78 89 Q84 89 85 84 L95 24 Z" fill="url(#potBodyTheme)" />
+
+              <!-- Gold decorative stripe on pot body -->
+              <path d="M29 44 L31 52 Q60 56 89 52 L91 44 Q60 48 29 44 Z" fill="#FFC107" />
+
+              <!-- Pot Rim -->
+              <rect x="18" y="10" width="84" height="16" rx="5" fill="url(#potRimTheme)" stroke="#FFC107" stroke-width="1.5" />
+              <line x1="22" y1="12" x2="98" y2="12" stroke="rgba(255,193,7,0.7)" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <div class="pot-floor-line"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="routine-section" aria-labelledby="routine-title">
+        <h2 id="routine-title">Daily Routine</h2>
+
+        <div class="routine-timeline">
+          <!-- 01: Morning (सुबह) -->
+          <div class="routine-item">
+            <div class="routine-node node-morning" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M4.93 10.93l2.83-2.83M19.07 10.93l-2.83-2.83M2 18h20M7 18a5 5 0 0 1 10 0" />
+              </svg>
+            </div>
+            <article class="routine-card">
+              <div class="routine-info">
+                <h3 class="routine-time">सुबह</h3>
+                <p class="routine-desc">ताज़े पानी से आँखें धोएं + 1-2 बूँदें <b>EyeCare Drops</b>। दिन की शुरुआत में प्राकृतिक ताजगी और सफाई।</p>
+              </div>
+              <div class="routine-media">
+                <img src="images/4.1.jpg" alt="सुबह की आँखों की देखभाल" loading="lazy">
+              </div>
+            </article>
+          </div>
+
+          <!-- 02: Afternoon (दोपहर) -->
+          <div class="routine-item">
+            <div class="routine-node node-noon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4" fill="#FFC107" fill-opacity="0.25"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+              </svg>
+            </div>
+            <article class="routine-card">
+              <div class="routine-info">
+                <h3 class="routine-time">दोपहर</h3>
+                <p class="routine-desc">20-20-20 स्क्रीन ब्रेक + आँखों को आराम दें। लगातार स्क्रीन देखने से होने वाली थकान में राहत।</p>
+              </div>
+              <div class="routine-media">
+                <img src="images/4.2.jpg" alt="दोपहर की आँखों की देखभाल" loading="lazy">
+              </div>
+            </article>
+          </div>
+
+          <!-- 03: Evening (शाम) -->
+          <div class="routine-item">
+            <div class="routine-node node-evening" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 18a5 5 0 0 0-10 0M12 9v4M4.22 10.22l2.12 2.12M19.78 10.22l-2.12 2.12M1 18h22M1 22h22" />
+              </svg>
+            </div>
+            <article class="routine-card">
+              <div class="routine-info">
+                <h3 class="routine-time">शाम</h3>
+                <p class="routine-desc">ठंडे पानी के छींटे + रिलैक्सिंग केयर। दिनभर की धूल, पॉल्यूशन और भारीपन से आँखों को आराम।</p>
+              </div>
+              <div class="routine-media">
+                <img src="images/4.3.jpg" alt="शाम की आँखों की देखभाल" loading="lazy">
+              </div>
+            </article>
+          </div>
+
+          <!-- 04: Night (रात) -->
+          <div class="routine-item">
+            <div class="routine-node node-night" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFC107" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="#FFC107" fill-opacity="0.25" />
+                <circle cx="17" cy="6" r="1.5" fill="#FFC107" stroke="none" />
+              </svg>
+            </div>
+            <article class="routine-card">
+              <div class="routine-info">
+                <h3 class="routine-time">रात</h3>
+                <p class="routine-desc">सोने से पहले 1-2 बूँदें <b>EyeCare</b> + भरपूर नींद। रातभर शांत रिकवरी और सुबह फ्रेश अहसास।</p>
+              </div>
+              <div class="routine-media">
+                <img src="images/4.4.jpg" alt="रात की आँखों की देखभाल" loading="lazy">
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-section" aria-labelledby="trust-title">
+        <h2 id="trust-title">गुणवत्ता और पारदर्शिता का भरोसा</h2>
+
+        <div class="trust-grid">
+          <!-- 01: GMP -->
+          <article class="trust-card">
+            <div class="trust-badge-seal" aria-label="Verified">
+              <span class="trust-check">✓</span>
+            </div>
+            <div class="trust-img-wrap">
+              <img src="images/cert1.avif" alt="GMP Certified" class="trust-cert-img cert-img-gmp" loading="lazy">
+            </div>
+            <h3 class="trust-card-title">GMP Certified</h3>
+          </article>
+
+          <!-- 02: ISO -->
+          <article class="trust-card">
+            <div class="trust-badge-seal" aria-label="Verified">
+              <span class="trust-check">✓</span>
+            </div>
+            <div class="trust-img-wrap">
+              <img src="images/iso.avif" alt="ISO Certified" class="trust-cert-img cert-img-iso" loading="lazy">
+            </div>
+            <h3 class="trust-card-title">ISO Certified</h3>
+          </article>
+
+          <!-- 03: FSSAI -->
+          <article class="trust-card">
+            <div class="trust-badge-seal" aria-label="Verified">
+              <span class="trust-check">✓</span>
+            </div>
+            <div class="trust-img-wrap">
+              <img src="images/cert3.avif" alt="FSSAI Approved" class="trust-cert-img cert-img-fssai" loading="lazy">
+            </div>
+            <h3 class="trust-card-title">FSSAI Compliant</h3>
+          </article>
+
+          <!-- 04: Lab Tested -->
+          <article class="trust-card">
+            <div class="trust-badge-seal" aria-label="Verified">
+              <span class="trust-check">✓</span>
+            </div>
+            <div class="trust-img-wrap">
+              <img src="images/cert4.avif" alt="Lab Tested" class="trust-cert-img cert-img-lab" loading="lazy">
+            </div>
+            <h3 class="trust-card-title">Lab Tested</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 8: Order Now / Lead Inquiry Form -->
+      <section class="order-section" id="order" aria-labelledby="order-title">
+        <h2 id="order-title">EyeCare Drops की जानकारी प्राप्त करें</h2>
+
+        <div class="order-card-container">
+          <form class="order-form" id="lead-form" action="thankyou.html" method="GET">
+            <!-- Full Name Field -->
+            <div class="form-group">
+              <label for="user-name" class="form-label">
+                <span>अपना नाम</span>
+                <span class="required-star">*</span>
+              </label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">👤</span>
+                <input
+                  type="text"
+                  id="user-name"
+                  name="name"
+                  class="form-input"
+                  placeholder="अपना पूरा नाम दर्ज करें।"
+                  pattern="[A-Za-z\u0900-\u097F\s]{2,50}"
+                  title="कृपया केवल अक्षर (Letters) ही दर्ज करें"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+            </div>
+
+            <!-- Mobile Number Field -->
+            <div class="form-group">
+              <label for="user-phone" class="form-label">
+                <span>मोबाइल नंबर</span>
+                <span class="required-star">*</span>
+              </label>
+              <div class="input-wrap">
+                <span class="input-prefix" aria-hidden="true">+91</span>
+                <input
+                  type="tel"
+                  id="user-phone"
+                  name="phone"
+                  class="form-input has-prefix"
+                  placeholder="अपना 10 अंकों का मोबाइल नंबर दर्ज करें।"
+                  pattern="[6-9][0-9]{9}"
+                  maxlength="10"
+                  inputmode="numeric"
+                  title="मोबाइल नंबर 6, 7, 8 या 9 से शुरू होना चाहिए और पूरे 10 अंक होने चाहिए"
+                  autocomplete="tel"
+                  required
+                >
+              </div>
+            </div>
+
+            <!-- CTA Submit Button -->
+            <button type="submit" class="order-submit-btn">
+              <span>अभी जानकारी प्राप्त करें</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+
+            <!-- Trust Bar Under CTA -->
+            <div class="order-trust-footer">
+              <span>🔒 Secure Order</span>
+              <span class="footer-dot" aria-hidden="true">•</span>
+              <span>🚚 Delivery Details</span>
+              <span class="footer-dot" aria-hidden="true">•</span>
+              <span>📋 Product Information</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Section: Real Customer Experiences (ग्राहकों के वास्तविक अनुभव) -->
+      <section class="testimonials-section" aria-labelledby="testimonials-title">
+        <h2 id="testimonials-title">ग्राहकों के वास्तविक अनुभव</h2>
+
+        <div class="testimonials-grid">
+          <!-- Review 1: r1.jpg -->
+          <article class="testimonial-card">
+            <span class="quote-watermark" aria-hidden="true">“</span>
+            <div class="testimonial-header">
+              <div class="testimonial-avatar-wrap">
+                <img src="images/r1.jpg" alt="राजेश शर्मा" class="testimonial-avatar" loading="lazy">
+              </div>
+              <div class="testimonial-meta">
+                <div class="testimonial-name-row">
+                  <h3 class="testimonial-name">राजेश शर्मा</h3>
+                  <span class="verified-tag">✓ Verified</span>
+                </div>
+                <p class="testimonial-place">📍 लखनऊ, उत्तर प्रदेश</p>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "ऑफिस में दिनभर कंप्यूटर स्क्रीन पर 8-9 घंटे काम करने से आँखों में जलन और भारीपन रहता था। EyeCare Drops इस्तेमाल करने के बाद से आँखों को बहुत ठंडक और आराम मिला है। अब दिनभर ताजगी बनी रहती है।"
+            </p>
+          </article>
+
+          <!-- Review 2: r2jpg.jpg -->
+          <article class="testimonial-card">
+            <span class="quote-watermark" aria-hidden="true">“</span>
+            <div class="testimonial-header">
+              <div class="testimonial-avatar-wrap">
+                <img src="images/r2jpg.jpg" alt="अमित वर्मा" class="testimonial-avatar" loading="lazy">
+              </div>
+              <div class="testimonial-meta">
+                <div class="testimonial-name-row">
+                  <h3 class="testimonial-name">अमित वर्मा</h3>
+                  <span class="verified-tag">✓ Verified</span>
+                </div>
+                <p class="testimonial-place">📍 पुणे, महाराष्ट्र</p>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "धूल और प्रदूषण की वजह से आँखों में सूखापन और चुभन की समस्या रहती थी। कई आई ड्रॉप्स में जलन होती थी, लेकिन इसका 100% आयुर्वेदिक फॉर्मूलेशन एकदम सौम्य है। बहुत ही असरदार उत्पाद!"
+            </p>
+          </article>
+
+          <!-- Review 3: r3.jpg -->
+          <article class="testimonial-card">
+            <span class="quote-watermark" aria-hidden="true">“</span>
+            <div class="testimonial-header">
+              <div class="testimonial-avatar-wrap">
+                <img src="images/r3.jpg" alt="सुनीता वर्मा" class="testimonial-avatar" loading="lazy">
+              </div>
+              <div class="testimonial-meta">
+                <div class="testimonial-name-row">
+                  <h3 class="testimonial-name">सुनीता वर्मा</h3>
+                  <span class="verified-tag">✓ Verified</span>
+                </div>
+                <p class="testimonial-place">📍 जयपुर, राजस्थान</p>
+              </div>
+            </div>
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "देर रात तक मोबाइल और लैपटॉप पर काम करने से आँखें अक्सर लाल और भारी हो जाती थीं। EyeCare Drops का रोज़ाना इस्तेमाल करने के बाद से आँखों को भरपूर ताजगी और आराम मिला है। बहुत ही भरोसेमंद और असरदार आई ड्रॉप्स!"
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 10: FAQs -->
+      <section class="faqs-section" id="faqs" aria-labelledby="faqs-title">
+        <h2 id="faqs-title">FAQs</h2>
+
+        <div class="faqs-container">
+          <!-- FAQ 1 -->
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>EyeCare Drops क्या है?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>यह आँखों की रोज़ाना देखभाल के लिए बना हर्बल प्रोडक्ट है, जिसमें पारंपरिक Ayurvedic herbs शामिल हैं।</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>क्या यह आँखों की थकान और जलन में मदद करता है?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>यह आँखों की थकान, रूखेपन और जलन में राहत देने में सहायक है।</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Product का इस्तेमाल कैसे करें?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>उत्पाद के लेबल पर दिए गए निर्देशों के अनुसार इस्तेमाल करें।</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>कितने समय में परिणाम दिखाई देते हैं?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>परिणाम व्यक्ति के अनुसार अलग हो सकते हैं। कई लोगों को नियमित उपयोग से कुछ हफ़्तों में फ़र्क महसूस होता है।</p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>क्या COD उपलब्ध है?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>जहाँ सुविधा उपलब्ध है, वहाँ Cash on Delivery का विकल्प चुना जा सकता है।</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Section 11: Disclaimer -->
+      <section class="disclaimer-section" id="disclaimer">
+        <div class="disclaimer-box">
+          <p>
+            <strong>Disclaimer:</strong> EyeCare Drops एक herbal dietary/wellness supplement है। यह किसी disease का diagnosis, treatment, cure या prevention करने का दावा नहीं करता और medical treatment का substitute नहीं है। आँखों की किसी गंभीर समस्या के लिए qualified healthcare professional से consultation करें। Results अलग हो सकते हैं। Pregnancy, breastfeeding, ongoing medication या diagnosed condition में उपयोग से पहले medical advice लें।
+          </p>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-links">
+            <button type="button" class="footer-link-btn" data-modal="modal-privacy">Privacy Policy</button>
+            <span class="footer-pipe" aria-hidden="true">|</span>
+            <button type="button" class="footer-link-btn" data-modal="modal-terms">Terms &amp; Conditions</button>
+            <span class="footer-pipe" aria-hidden="true">|</span>
+            <button type="button" class="footer-link-btn" data-modal="modal-shipping">Shipping Policy</button>
+            <span class="footer-pipe" aria-hidden="true">|</span>
+            <button type="button" class="footer-link-btn" data-modal="modal-cancellation">Cancellation Policy</button>
+            <span class="footer-pipe" aria-hidden="true">|</span>
+            <button type="button" class="footer-link-btn" data-modal="modal-disclaimer">Legal Disclaimer</button>
+          </div>
+        </footer>
+      </section>
+
+      <!-- Sticky Bottom Order Bar -->
+      <aside class="sticky-order-bar" aria-label="Quick Order Bar">
+        <div class="sticky-brand">
+          <div class="sticky-brand-title">
+            <span class="sticky-leaf-icon" aria-hidden="true">🌿</span>
+            <span class="sticky-brand-name">EyeCare Drops</span>
+          </div>
+          <p class="sticky-brand-sub">आँखों के लिए Ayurvedic Herbal Support</p>
+        </div>
+        <a href="#order" class="sticky-order-btn">
+          <span class="sticky-cart-icon" aria-hidden="true">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+          <span class="sticky-btn-text">अभी Order करें &rarr;</span>
+        </a>
+      </aside>
+    </main>
+
+    <!-- Policy Modal 1: Privacy Policy -->
+    <div class="policy-modal" id="modal-privacy" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-privacy">
+      <div class="policy-dialog">
+        <div class="policy-dialog-header">
+          <h2 id="modal-title-privacy">Privacy Policy</h2>
+          <button type="button" class="policy-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="policy-dialog-body">
+          <p>EyeCare Drops आपकी personal information की सुरक्षा को सर्वोच्च प्राथमिकता देता है। Order करते समय हम नाम, मोबाइल नंबर, delivery address, payment details और order history जैसी जानकारी एकत्र कर सकते हैं।</p>
+          <ul>
+            <li>आपकी जानकारी encrypted और secure रखी जाती है।</li>
+            <li>जानकारी केवल order processing और delivery के लिए उपयोग होती है।</li>
+            <li>आपकी जानकारी किसी third-party को बेची नहीं जाती।</li>
+          </ul>
+          <p>किसी privacy concern के लिए हमारी टीम से संपर्क करें।</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Modal 2: Terms & Conditions -->
+    <div class="policy-modal" id="modal-terms" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-terms">
+      <div class="policy-dialog">
+        <div class="policy-dialog-header">
+          <h2 id="modal-title-terms">Terms &amp; Conditions</h2>
+          <button type="button" class="policy-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="policy-dialog-body">
+          <p>EyeCare Drops का उपयोग करके आप इन terms से सहमत होते हैं:</p>
+          <ul>
+            <li>Product results व्यक्ति-व्यक्ति अलग हो सकते हैं।</li>
+            <li>यह product किसी बीमारी का इलाज नहीं है—यह wellness formulation है।</li>
+            <li>18 वर्ष से कम आयु के व्यक्ति guardian consent के बिना order न करें।</li>
+            <li>Fake या fraudulent orders के लिए legal action लिया जा सकता है।</li>
+            <li>Product images केवल representation के लिए हैं।</li>
+          </ul>
+          <p><strong>EyeCare Drops बिना prior notice के prices, offers या specifications बदलने का अधिकार रखता है।</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Modal 3: Shipping Policy -->
+    <div class="policy-modal" id="modal-shipping" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-shipping">
+      <div class="policy-dialog">
+        <div class="policy-dialog-header">
+          <h2 id="modal-title-shipping">Shipping Policy</h2>
+          <button type="button" class="policy-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="policy-dialog-body">
+          <p>हम पूरे India में shipping प्रदान करते हैं। Delivery timeline:</p>
+          <ul>
+            <li>Metro cities: 3–5 business days</li>
+            <li>Tier-2 / Tier-3 cities: 5–7 business days</li>
+            <li>Remote / rural areas: 7–10 business days</li>
+          </ul>
+          <p><strong>Order confirm होने के 24–48 घंटे के अंदर tracking number SMS/WhatsApp पर भेजा जाएगा।</strong></p>
+          <ul>
+            <li>Delivery attempt 3 बार की जाएगी।</li>
+            <li>Incorrect address की जिम्मेदारी customer की होगी।</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Modal 4: Cancellation Policy -->
+    <div class="policy-modal" id="modal-cancellation" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-cancellation">
+      <div class="policy-dialog">
+        <div class="policy-dialog-header">
+          <h2 id="modal-title-cancellation">Cancellation Policy</h2>
+          <button type="button" class="policy-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="policy-dialog-body">
+          <p>आप order confirm होने के 24 घंटे के अंदर cancellation request कर सकते हैं।</p>
+          <ul>
+            <li>Order dispatch होने के बाद cancellation संभव नहीं है।</li>
+            <li>Damaged या wrong product मिलने पर 7 दिन के अंदर complaint करें।</li>
+            <li>Opened/used products return नहीं किए जाएंगे।</li>
+            <li>Refund 5–7 business days में original payment method पर होगा।</li>
+          </ul>
+          <p><strong>Return के लिए product original packaging में होना ज़रूरी है।</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Modal 5: Legal Disclaimer -->
+    <div class="policy-modal" id="modal-disclaimer" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title-disclaimer">
+      <div class="policy-dialog">
+        <div class="policy-dialog-header">
+          <h2 id="modal-title-disclaimer">Legal Disclaimer</h2>
+          <button type="button" class="policy-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="policy-dialog-body">
+          <p>EyeCare Drops एक natural herbal formulation है। यह product किसी बीमारी का diagnosis, treatment, cure या prevention नहीं करता।</p>
+          <ul>
+            <li>Results individual to individual अलग हो सकते हैं।</li>
+            <li>यह FSSAI guidelines के अनुसार natural herbal formulation है, drug नहीं।</li>
+            <li>किसी medical condition में उपयोग से पहले doctor से परामर्श करें।</li>
+            <li>Pregnant, nursing women या chronic illness वाले व्यक्ति पहले physician से consult करें।</li>
+          </ul>
+          <p><strong>Product की images, descriptions और testimonials केवल illustrative purpose के लिए हैं।</strong></p>
+        </div>
+      </div>
+    </div>
+  <script>
+const bannerImage = document.querySelector(".banner-image");
+const bannerError = document.querySelector(".banner-error");
+
+const symptomImages = [
+  ["images/2.1.webp", "आँखों में लालिमा"],
+  ["images/2.2.jpg", "आँखों में जलन और चुभन"],
+  ["images/2.3.jpg", "आँखों का सूखापन"],
+  ["images/2.4.jpg", "आँखों से पानी आना"],
+  ["images/2.5.jpg", "स्क्रीन से आँखों में थकान"]
+];
+
+document.querySelectorAll(".symptom-card").forEach((card, index) => {
+  if (index >= symptomImages.length) return;
+  const image = document.createElement("img");
+  image.className = "symptom-image";
+  image.src = symptomImages[index][0];
+  image.alt = symptomImages[index][1];
+  card.prepend(image);
+});
+
+const careImages = [
+  ["images/4.1.jpg", "आँखों की सुविधा"],
+  ["images/4.2.jpg", "स्क्रीन से आँखों की देखभाल"],
+  ["images/4.3.jpg", "धूल और प्रदूषण से सुरक्षा"],
+  ["images/4.4.jpg", "स्वस्थ आँखों की दिनचर्या"]
+];
+
+document.querySelectorAll(".care-item").forEach((item, index) => {
+  const image = document.createElement("img");
+  image.className = "care-image";
+  image.src = careImages[index][0];
+  image.alt = careImages[index][1];
+  item.querySelector(".care-content").prepend(image);
+});
+
+bannerImage.addEventListener("error", () => {
+  bannerError.hidden = false;
+});
+
+// ========================================================
+// Policy Modals Functionality
+// ========================================================
+document.querySelectorAll(".footer-link-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-modal");
+    const modal = document.getElementById(targetId);
+    if (modal) {
+      modal.hidden = false;
+      document.body.classList.add("modal-open");
+    }
+  });
+});
+
+document.querySelectorAll(".policy-modal").forEach((modal) => {
+  // Close on backdrop click outside dialog
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.hidden = true;
+      document.body.classList.remove("modal-open");
+    }
+  });
+
+  // Close on X button click
+  const closeBtn = modal.querySelector(".policy-close");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      modal.hidden = true;
+      document.body.classList.remove("modal-open");
+    });
+  }
+});
+
+// Close on Escape key press
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelectorAll(".policy-modal").forEach((m) => {
+      m.hidden = true;
+    });
+    document.body.classList.remove("modal-open");
+  }
+});
+
+// ========================================================
+// Order Form Validation (Letters only in name, 6-9 start in phone)
+// ========================================================
+const orderForm = document.getElementById("lead-form");
+const nameInput = document.getElementById("user-name");
+const phoneInput = document.getElementById("user-phone");
+
+if (nameInput) {
+  // Prevent typing non-letter characters
+  nameInput.addEventListener("keypress", (e) => {
+    if (!/^[A-Za-z\u0900-\u097F\s]$/.test(e.key)) {
+      e.preventDefault();
+    }
+  });
+
+  // Sanitize on input / paste
+  nameInput.addEventListener("input", () => {
+    nameInput.value = nameInput.value.replace(/[^A-Za-z\u0900-\u097F\s]/g, "");
+    if (nameInput.value.trim().length > 0) {
+      nameInput.setCustomValidity("");
+    }
+  });
+}
+
+if (phoneInput) {
+  // Prevent typing non-digits and prevent first digit from being 0-5
+  phoneInput.addEventListener("keypress", (e) => {
+    if (!/^\d$/.test(e.key)) {
+      e.preventDefault();
+      return;
+    }
+    if (phoneInput.value.length === 0 && !/^[6-9]$/.test(e.key)) {
+      e.preventDefault();
+      phoneInput.setCustomValidity("मोबाइल नंबर केवल 6, 7, 8 या 9 से ही शुरू होना चाहिए।");
+      phoneInput.reportValidity();
+    }
+  });
+
+  // Sanitize on input / paste
+  phoneInput.addEventListener("input", () => {
+    let val = phoneInput.value.replace(/\D/g, "");
+    if (val.length > 0 && !/^[6-9]/.test(val)) {
+      val = val.replace(/^[^6-9]+/, "");
+    }
+    if (val.length > 10) {
+      val = val.slice(0, 10);
+    }
+    phoneInput.value = val;
+
+    if (val.length === 0) {
+      phoneInput.setCustomValidity("");
+    } else if (!/^[6-9]/.test(val)) {
+      phoneInput.setCustomValidity("मोबाइल नंबर केवल 6, 7, 8 या 9 से ही शुरू होना चाहिए।");
+    } else if (val.length < 10) {
+      phoneInput.setCustomValidity("कृपया पूरे 10 अंकों का मोबाइल नंबर दर्ज करें।");
+    } else {
+      phoneInput.setCustomValidity("");
+    }
+  });
+}
+
+if (orderForm) {
+  orderForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nameVal = nameInput ? nameInput.value.trim() : "";
+    const phoneVal = phoneInput ? phoneInput.value.trim() : "";
+
+    // Name Validation
+    if (!nameVal || !/^[A-Za-z\u0900-\u097F\s]{2,50}$/.test(nameVal)) {
+      if (nameInput) {
+        nameInput.setCustomValidity("कृपया नाम में केवल अक्षर (Letters) ही दर्ज करें।");
+        nameInput.reportValidity();
+        nameInput.focus();
+      }
+      return;
+    }
+    if (nameInput) nameInput.setCustomValidity("");
+
+    // Phone Validation
+    if (!phoneVal || !/^[6-9]\d{9}$/.test(phoneVal)) {
+      if (phoneInput) {
+        if (!/^[6-9]/.test(phoneVal)) {
+          phoneInput.setCustomValidity("मोबाइल नंबर केवल 6, 7, 8 या 9 से ही शुरू होना चाहिए।");
+        } else {
+          phoneInput.setCustomValidity("कृपया पूरे 10 अंकों का मोबाइल नंबर दर्ज करें।");
+        }
+        phoneInput.reportValidity();
+        phoneInput.focus();
+      }
+      return;
+    }
+    if (phoneInput) phoneInput.setCustomValidity("");
+
+    // All valid -> proceed to thank you page
+    window.location.href = "thankyou.html";
+  });
+}
+
+    </script>
+  </body>
+</html>
