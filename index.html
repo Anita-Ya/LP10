@@ -285,7 +285,7 @@ body {
   margin: 1.2rem auto 1.4rem;
   border: 8px solid #55a650;
   border-radius: 28px;
-  background: url("images/product.jpeg") center / cover no-repeat;
+  background: url("images/product.avif") center / cover no-repeat;
   box-shadow: 0 12px 24px rgba(30, 58, 95, 0.2);
   animation: product-image-in 0.9s ease 0.2s both;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -2239,11 +2239,11 @@ body.modal-open {
       <section class="banner-section" aria-label="आँखों की देखभाल">
         <img
           class="banner-image"
-          src="images/banner.png"
+          src="images/banner.avif"
           alt="आँखों की जलन, सूखापन और भारीपन के कारणों और आँखों की देखभाल के बारे में जानकारी"
         >
         <p class="banner-error" role="alert" hidden>
-          Banner load nahi ho paya. Kripya images/banner.png file check karein.
+          Banner load nahi ho paya. Kripya images/banner.avif file check karein.
         </p>
       </section>
 
@@ -2384,7 +2384,7 @@ body.modal-open {
             <div class="leaves-col-left">
               <article class="plant-leaf leaf-1">
                 <div class="leaf-image-container">
-                  <img src="images/braj.jpg" alt="भृंगराज" class="leaf-img" loading="lazy">
+                  <img src="images/braj.avif" alt="भृंगराज" class="leaf-img" loading="lazy">
                 </div>
                 <div class="leaf-body">
                   <h3 class="leaf-title">भृंगराज</h3>
@@ -2394,7 +2394,7 @@ body.modal-open {
 
               <article class="plant-leaf leaf-3">
                 <div class="leaf-image-container">
-                  <img src="images/tulsi.jpg" alt="तुलसी" class="leaf-img" loading="lazy">
+                  <img src="images/tulsi.avif" alt="तुलसी" class="leaf-img" loading="lazy">
                 </div>
                 <div class="leaf-body">
                   <h3 class="leaf-title">तुलसी</h3>
@@ -2407,7 +2407,7 @@ body.modal-open {
             <div class="leaves-col-right">
               <article class="plant-leaf leaf-2">
                 <div class="leaf-image-container">
-                  <img src="images/rose.jpg" alt="गुलाब फूल" class="leaf-img" loading="lazy">
+                  <img src="images/rose.avif" alt="गुलाब फूल" class="leaf-img" loading="lazy">
                 </div>
                 <div class="leaf-body">
                   <h3 class="leaf-title">गुलाब फूल</h3>
@@ -2417,7 +2417,7 @@ body.modal-open {
 
               <article class="plant-leaf leaf-4">
                 <div class="leaf-image-container">
-                  <img src="images/puna.jpg" alt="पुनर्नवा" class="leaf-img" loading="lazy">
+                  <img src="images/puna.avif" alt="पुनर्नवा" class="leaf-img" loading="lazy">
                 </div>
                 <div class="leaf-body">
                   <h3 class="leaf-title">पुनर्नवा</h3>
@@ -2492,7 +2492,7 @@ body.modal-open {
                 <p class="routine-desc">ताज़े पानी से आँखें धोएं + 1-2 बूँदें <b>EyeCare Drops</b>। दिन की शुरुआत में प्राकृतिक ताजगी और सफाई।</p>
               </div>
               <div class="routine-media">
-                <img src="images/4.1.jpg" alt="सुबह की आँखों की देखभाल" loading="lazy">
+                <img src="images/4.1.avif" alt="सुबह की आँखों की देखभाल" loading="lazy">
               </div>
             </article>
           </div>
@@ -2511,7 +2511,7 @@ body.modal-open {
                 <p class="routine-desc">20-20-20 स्क्रीन ब्रेक + आँखों को आराम दें। लगातार स्क्रीन देखने से होने वाली थकान में राहत।</p>
               </div>
               <div class="routine-media">
-                <img src="images/4.2.jpg" alt="दोपहर की आँखों की देखभाल" loading="lazy">
+                <img src="images/4.2.avif" alt="दोपहर की आँखों की देखभाल" loading="lazy">
               </div>
             </article>
           </div>
@@ -2529,7 +2529,7 @@ body.modal-open {
                 <p class="routine-desc">ठंडे पानी के छींटे + रिलैक्सिंग केयर। दिनभर की धूल, पॉल्यूशन और भारीपन से आँखों को आराम।</p>
               </div>
               <div class="routine-media">
-                <img src="images/4.3.jpg" alt="शाम की आँखों की देखभाल" loading="lazy">
+                <img src="images/4.3.avif" alt="शाम की आँखों की देखभाल" loading="lazy">
               </div>
             </article>
           </div>
@@ -2548,7 +2548,7 @@ body.modal-open {
                 <p class="routine-desc">सोने से पहले 1-2 बूँदें <b>EyeCare</b> + भरपूर नींद। रातभर शांत रिकवरी और सुबह फ्रेश अहसास।</p>
               </div>
               <div class="routine-media">
-                <img src="images/4.4.jpg" alt="रात की आँखों की देखभाल" loading="lazy">
+                <img src="images/4.4.avif" alt="रात की आँखों की देखभाल" loading="lazy">
               </div>
             </article>
           </div>
@@ -2657,6 +2657,27 @@ body.modal-open {
               </div>
             </div>
 
+            <!-- Delivery Address Field -->
+            <div class="form-group">
+              <label for="user-address" class="form-label">
+                <span>डिलीवरी पता</span>
+                <span class="required-star">*</span>
+              </label>
+              <div class="input-wrap">
+                <textarea
+                  id="user-address"
+                  name="address"
+                  class="form-input"
+                  placeholder="अपना पूरा डिलीवरी पता दर्ज करें।"
+                  minlength="10"
+                  maxlength="500"
+                  rows="3"
+                  autocomplete="street-address"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
             <!-- CTA Submit Button -->
             <button type="submit" class="order-submit-btn">
               <span>अभी जानकारी प्राप्त करें</span>
@@ -2680,12 +2701,12 @@ body.modal-open {
         <h2 id="testimonials-title">ग्राहकों के वास्तविक अनुभव</h2>
 
         <div class="testimonials-grid">
-          <!-- Review 1: r1.jpg -->
+          <!-- Review 1: r1.avif -->
           <article class="testimonial-card">
             <span class="quote-watermark" aria-hidden="true">“</span>
             <div class="testimonial-header">
               <div class="testimonial-avatar-wrap">
-                <img src="images/r1.jpg" alt="राजेश शर्मा" class="testimonial-avatar" loading="lazy">
+                <img src="images/r1.avif" alt="राजेश शर्मा" class="testimonial-avatar" loading="lazy">
               </div>
               <div class="testimonial-meta">
                 <div class="testimonial-name-row">
@@ -2703,12 +2724,12 @@ body.modal-open {
             </p>
           </article>
 
-          <!-- Review 2: r2jpg.jpg -->
+          <!-- Review 2: r2.avif -->
           <article class="testimonial-card">
             <span class="quote-watermark" aria-hidden="true">“</span>
             <div class="testimonial-header">
               <div class="testimonial-avatar-wrap">
-                <img src="images/r2jpg.jpg" alt="अमित वर्मा" class="testimonial-avatar" loading="lazy">
+                <img src="images/r2.avif" alt="अमित वर्मा" class="testimonial-avatar" loading="lazy">
               </div>
               <div class="testimonial-meta">
                 <div class="testimonial-name-row">
@@ -2726,12 +2747,12 @@ body.modal-open {
             </p>
           </article>
 
-          <!-- Review 3: r3.jpg -->
+          <!-- Review 3: r3.avif -->
           <article class="testimonial-card">
             <span class="quote-watermark" aria-hidden="true">“</span>
             <div class="testimonial-header">
               <div class="testimonial-avatar-wrap">
-                <img src="images/r3.jpg" alt="सुनीता वर्मा" class="testimonial-avatar" loading="lazy">
+                <img src="images/r3.avif" alt="सुनीता वर्मा" class="testimonial-avatar" loading="lazy">
               </div>
               <div class="testimonial-meta">
                 <div class="testimonial-name-row">
@@ -2961,11 +2982,11 @@ const bannerImage = document.querySelector(".banner-image");
 const bannerError = document.querySelector(".banner-error");
 
 const symptomImages = [
-  ["images/2.1.webp", "आँखों में लालिमा"],
-  ["images/2.2.jpg", "आँखों में जलन और चुभन"],
-  ["images/2.3.jpg", "आँखों का सूखापन"],
-  ["images/2.4.jpg", "आँखों से पानी आना"],
-  ["images/2.5.jpg", "स्क्रीन से आँखों में थकान"]
+  ["images/2.1.avif", "आँखों में लालिमा"],
+  ["images/2.2.avif", "आँखों में जलन और चुभन"],
+  ["images/2.3.avif", "आँखों का सूखापन"],
+  ["images/2.4.avif", "आँखों से पानी आना"],
+  ["images/2.5.avif", "स्क्रीन से आँखों में थकान"]
 ];
 
 document.querySelectorAll(".symptom-card").forEach((card, index) => {
@@ -2978,10 +2999,10 @@ document.querySelectorAll(".symptom-card").forEach((card, index) => {
 });
 
 const careImages = [
-  ["images/4.1.jpg", "आँखों की सुविधा"],
-  ["images/4.2.jpg", "स्क्रीन से आँखों की देखभाल"],
-  ["images/4.3.jpg", "धूल और प्रदूषण से सुरक्षा"],
-  ["images/4.4.jpg", "स्वस्थ आँखों की दिनचर्या"]
+  ["images/4.1.avif", "आँखों की सुविधा"],
+  ["images/4.2.avif", "स्क्रीन से आँखों की देखभाल"],
+  ["images/4.3.avif", "धूल और प्रदूषण से सुरक्षा"],
+  ["images/4.4.avif", "स्वस्थ आँखों की दिनचर्या"]
 ];
 
 document.querySelectorAll(".care-item").forEach((item, index) => {
@@ -3045,6 +3066,8 @@ document.addEventListener("keydown", (e) => {
 const orderForm = document.getElementById("lead-form");
 const nameInput = document.getElementById("user-name");
 const phoneInput = document.getElementById("user-phone");
+const addressInput = document.getElementById("user-address");
+const ordersEndpoint = "https://script.google.com/macros/s/AKfycbwapezCkZ3069IWB0P1tEFyAl82X2vnhVzc7I49pdbLXGpPmFMYUpiPLBE-xiRF2Jfi/exec";
 
 if (nameInput) {
   // Prevent typing non-letter characters
@@ -3100,12 +3123,19 @@ if (phoneInput) {
   });
 }
 
+if (addressInput) {
+  addressInput.addEventListener("input", () => {
+    addressInput.setCustomValidity("");
+  });
+}
+
 if (orderForm) {
-  orderForm.addEventListener("submit", (e) => {
+  orderForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const nameVal = nameInput ? nameInput.value.trim() : "";
     const phoneVal = phoneInput ? phoneInput.value.trim() : "";
+    const addressVal = addressInput ? addressInput.value.replace(/\s+/g, " ").trim() : "";
 
     // Name Validation
     if (!nameVal || !/^[A-Za-z\u0900-\u097F\s]{2,50}$/.test(nameVal)) {
@@ -3133,8 +3163,47 @@ if (orderForm) {
     }
     if (phoneInput) phoneInput.setCustomValidity("");
 
-    // All valid -> proceed to thank you page
-    window.location.href = "thankyou.html";
+    // Address Validation
+    if (!addressVal || addressVal.length < 10) {
+      if (addressInput) {
+        addressInput.setCustomValidity("कृपया कम से कम 10 अक्षरों का पूरा पता दर्ज करें।");
+        addressInput.reportValidity();
+        addressInput.focus();
+      }
+      return;
+    }
+    if (addressInput) addressInput.setCustomValidity("");
+
+    const submitButton = orderForm.querySelector("button[type='submit']");
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.setAttribute("aria-busy", "true");
+    }
+
+    try {
+      const payload = new URLSearchParams({
+        name: nameVal,
+        phone: phoneVal,
+        address: addressVal
+      });
+
+      // Apps Script accepts this cross-origin POST; no-cors prevents browser CORS blocking.
+      await fetch(ordersEndpoint, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        body: payload.toString()
+      });
+
+      window.location.href = "thankyou.html";
+    } catch (error) {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.removeAttribute("aria-busy");
+      }
+      alert("ऑर्डर भेजने में समस्या हुई। कृपया दोबारा प्रयास करें।");
+      console.error("Order submission failed:", error);
+    }
   });
 }
 
