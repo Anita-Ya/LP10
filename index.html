@@ -1100,8 +1100,14 @@ body {
 /* Optical Calibration so all 4 logos appear mathematically equal in visual size */
 .cert-img-gmp {
   width: auto;
-  height: 135px;
+  height: 155px;
   max-width: none;
+}
+
+.trust-img-wrap-gmp {
+  width: 140px;
+  height: 140px;
+  overflow: visible;
 }
 
 .cert-img-iso {
@@ -2139,7 +2145,7 @@ body.modal-open {
   }
 
   .cert-img-gmp {
-    height: 122px;
+    height: 142px;
     width: auto;
   }
 
@@ -2564,7 +2570,7 @@ body.modal-open {
             <div class="trust-badge-seal" aria-label="Verified">
               <span class="trust-check">✓</span>
             </div>
-            <div class="trust-img-wrap">
+            <div class="trust-img-wrap trust-img-wrap-gmp">
               <img src="images/cert1.avif" alt="GMP Certified" class="trust-cert-img cert-img-gmp" loading="lazy">
             </div>
             <h3 class="trust-card-title">GMP Certified</h3>
